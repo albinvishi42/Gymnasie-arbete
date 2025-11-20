@@ -1,54 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<title>Bilmärken – Mercedes, Audi, BMW</title>
-<style>
-  body { font-family: Arial; background:#f0f0f0; margin:0; }
-  h1 { text-align:center; padding:20px; background:#222; color:white; }
-  .box { background:white; padding:15px; margin:15px; border-radius:8px; }
-  img { width:200px; border-radius:6px; }
-  .circle { width:60px; height:60px; border-radius:50%; background:#008cff; margin:10px auto; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Bilportal – Mercedes · Audi · BMW</title>
+  <style>
+    /* ====== UNIVERSITETSNIVÅ – MODERN, REN, PROFESSIONELL DESIGN ====== */
+    :root {
+      --primary: #0047b3;
+      --secondary: #1b1b1b;
+      --accent: #0077ff;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --radius: 14px;
+      --shadow: 0 6px 20px rgba(0,0,0,0.12);
+      --transition: 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial;
+      background: var(--bg);
+      color: var(--secondary);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 18px;
+      color: var(--primary);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .brand-section {
+      background: var(--card);
+      padding: 30px;
+      border-radius: var(--radius);
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .models {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .model-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .model-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .model-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    /* ====== GRAFISK FÖRETAGSLIK FIGUR ====== */
+    .chart-box {
+      margin-top: 50px;
+      background: var(--card);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      margin-top: 50px;
+      background: #eaeaea;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-<h1>Tre stora bilmärken</h1>
 
-<div class="box">
-  <h2>Mercedes-Benz</h2>
-  <div class="circle"></div>
-  <h3>C-Class</h3>
-  <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=60">
-  <p>En bekväm och populär mellanklassbil.</p>
+<header>
+  <h1>Premium Bilportal</h1>
+  <p>En professionell översikt över tre av världens mest ikoniska bilmärken: Mercedes, Audi och BMW.</p>
+</header>
 
-  <h3>S-Class</h3>
-  <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=60">
-  <p>En av världens lyxigaste bilar.</p>
+<nav>
+  <a href="#mercedes">Mercedes</a>
+  <a href="#audi">Audi</a>
+  <a href="#bmw">BMW</a>
+</nav>
+
+<div class="container">
+
+  <!-- ================= MERCEDES ================= -->
+  <section id="mercedes" class="brand-section">
+    <h2>Mercedes-Benz</h2>
+    <p>Mercedes är världsledande inom lyx, innovation och säkerhet. Deras bilar är kända för komfort och hög kvalitet.</p>
+
+    <div class="models">
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>Mercedes C-Class</h3>
+          <p>En modern och stilren mellanklassbil som kombinerar prestanda och vardagslyx.</p>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>Mercedes S-Class</h3>
+          <p>En av världens mest avancerade lyxbilar med toppteknologi och extrem komfort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AUDI ================= -->
+  <section id="audi" class="brand-section">
+    <h2>Audi</h2>
+    <p>Audi kombinerar modern design, quattro-teknik och hög precision. Märket står för balans mellan sportighet och lyx.</p>
+
+    <div class="models">
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>Audi A4</h3>
+          <p>Ett av Audis mest populära val, känd för precision och körglädje.</p>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>Audi A6</h3>
+          <p>En rymligare och mer tekniskt avancerad modell för professionella förare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BMW ================= -->
+  <section id="bmw" class="brand-section">
+    <h2>BMW</h2>
+    <p>BMW är synonymt med sportig körkänsla, exakta köregenskaper och hög teknisk standard.</p>
+
+    <div class="models">
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1502877828079-3d1827f5a5a5?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>BMW 3-serien</h3>
+          <p>En global ikon känd för sina sportiga egenskaper och perfekta balans.</p>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1517148815978-75f6acaaff84?auto=format&fit=crop&w=800&q=60">
+        <div class="card-content">
+          <h3>BMW 5-serien</h3>
+          <p>Kombinerar prestanda, komfort och långfärdskänsla på högsta nivå.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GRAFISK JÄMFÖRELSE ================= -->
+  <section class="chart-box">
+    <h2>Grafisk Jämförelse</h2>
+    <p>En enkel figur som representerar varumärkens marknadsprofil visuellt.</p>
+
+    <svg width="100%" height="180">
+      <circle cx="20%" cy="90" r="50" fill="#0047b3" opacity="0.85"></circle>
+      <circle cx="50%" cy="90" r="45" fill="#cc0000" opacity="0.85"></circle>
+      <circle cx="80%" cy="90" r="40" fill="#00a859" opacity="0.85"></circle>
+
+      <text x="18%" y="160" font-size="16">Mercedes</text>
+      <text x="48%" y="160" font-size="16">Audi</text>
+      <text x="78%" y="160" font-size="16">BMW</text>
+    </svg>
+  </section>
+
 </div>
 
-<div class="box">
-  <h2>Audi</h2>
-  <div class="circle" style="background:#ff4d4d"></div>
-  <h3>A4</h3>
-  <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=60">
-  <p>Modern design och bra körkänsla.</p>
-
-  <h3>A6</h3>
-  <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=60">
-  <p>Rymligare och mer avancerad än A4.</p>
-</div>
-
-<div class="box">
-  <h2>BMW</h2>
-  <div class="circle" style="background:#00a84f"></div>
-  <h3>3 Series</h3>
-  <img src="https://images.unsplash.com/photo-1502877828079-3d1827f5a5a5?auto=format&fit=crop&w=800&q=60">
-  <p>Känd för sportig körning.</p>
-
-  <h3>5 Series</h3>
-  <img src="https://images.unsplash.com/photo-1517148815978-75f6acaaff84?auto=format&fit=crop&w=800&q=60">
-  <p>Kombinerar komfort och sportkänsla.</p>
-</div>
+<footer>
+  © 2025 Premium Bilportal – Avancerad studentproduktion.
+</footer>
 
 </body>
 </html>
